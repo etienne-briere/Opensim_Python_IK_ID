@@ -1,4 +1,4 @@
-# Opensim easy processing with Python
+# Utilisation d'Opensim with Python
 Ce script a été réalisé via l'API d'Opensim dans l'objectif de simplifier le lancement du process des outils de mise à l'échelle du modèle (Scale Model), de cinématique inverse (Inverse Kinematics) et de dynamique inverse (Inverse Dynamics) pour de nombreux essais et sujets (normalement applicables dans l'interface OpenSim). 
 
 ## Configuration de votre environnement de script Python 
