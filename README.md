@@ -47,19 +47,19 @@ $ conda activate opensim_scripting
 ## Quelques contraintes d'utilisation du script
 - Choix du paramétrage des outils est le même pour tous les sujets
 - Fonctionne seulement si essais comportent 2 plateformes de force
-  **MAIS**
-- Fonctionne qu'importe le nombre de sujets
-- Fonctionne qu'importe le nombre d'essais/sujet (même si nombre d'essais différent entre sujet)
+- **MAIS**
+  * Fonctionne qu'importe le nombre de sujets
+  * Fonctionne qu'importe le nombre d'essais/sujet (même si nombre d'essais différent entre sujet)
 
 ## Utilisation du script principal 
 1. Lancer le script `IK_ID_with_opensim.py` dans le dossier `python`
 2. Suivre les paramètres d'entrée indiqués
 3. Le traitement peut prendre un certain temps en fonction du nombre de données à traiter
 4. En sortie :
-   - Nouveau modèle mis à l'échelle (`Model_sujet_n.osim`)
-   - Nouveaux fichiers `_settings_modified_sujet_n.xml` en fonction des choix de paramétrage des outils
+   - Nouveau modèle mis à l'échelle (`Model_Sujet_n.osim`)
+   - Nouveaux fichiers `_Settings_modified_Sujet_n.xml` en fonction des choix de paramétrage des outils
    - Dans `outputs` : résultats de IK en .mot et de ID en .sto pour chaque sujet
-     * exemples dans fichiers òutputs`
+     * exemples dans fichiers `outputs`
      
 
    
