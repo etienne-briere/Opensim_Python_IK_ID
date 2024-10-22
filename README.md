@@ -12,8 +12,7 @@ $ conda activate opensim_scripting
 **Pour en savoir plus :** https://opensimconfluence.atlassian.net/wiki/spaces/OpenSim/pages/53085346/Scripting+in+Python.
 
 ## Création des dossiers préalables 
-- Créer un dossier avec le nom de votre projet, à l'intérieur dupliquer le dossier `Dossiers_prealables_vides` ce sera plus simple.
-- Il doit contenir :
+- Créer un dossier avec le nom de votre projet, il doit contenir :
   * Un dossier `Calibrations`
     + comprenant un dossier pour chaque sujet `Sujet_n` avec à l'interieur le .C3D de la calibration réalisée
   * Un dossier `Data`
@@ -24,7 +23,7 @@ $ conda activate opensim_scripting
   * Un dossier `Geometry`
     +  meshs des segments corporels en .VTP qui servent à concevoir le modèle
   * Un dossier `python`
-    + Scripts des fonctions (.py) utilisées  par le code principal
+    + scripts des fonctions (.py) utilisées  par le code principal
       
   * Un fichier `Model.osim` : modèle à mettre à l'échelle
     + dupliquer le fichier `Model.osim` 
