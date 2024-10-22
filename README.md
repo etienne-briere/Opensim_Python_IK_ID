@@ -1,5 +1,5 @@
 # Opensim easy processing with Python
-Ce script a été réalisé via l'API d'Opensim dans l'objectif de simplifier le lancement du process des outils de mise à l'échelle du modèle (Scale Model), de cinématique inverse (Inverse Kinematics) et de dynamique inverse (Inverse Dynamics) pour de nombreux essais et sujets (normalement applicables dans OpenSim). 
+Ce script a été réalisé via l'API d'Opensim dans l'objectif de simplifier le lancement du process des outils de mise à l'échelle du modèle (Scale Model), de cinématique inverse (Inverse Kinematics) et de dynamique inverse (Inverse Dynamics) pour de nombreux essais et sujets (normalement applicables dans l'interface OpenSim). 
 
 ## Configuration de votre environnement de script Python 
 Le package "opensim" est disponible sous différentes versions de python. Il est conseillé d'utiliser Conda pour créer et utiliser un nouvel environnement. Après ouverture du Powershell Anaconda, utilisez les commandes suivantes pour créer et activer un nouvel environnement Conda. 
@@ -45,6 +45,16 @@ $ conda activate opensim_scripting
 - Fonctionne seulement si essais comportent 2 plateformes de force
 - Fonctionne qu'importe le nombre de sujets
 - Fonctionne qu'importe le nombre d'essais/sujet (même si nombre d'essais différent entre sujet)
+
+## Utilisation du script principal 
+1. Lancer le script `IK_ID_with_opensim.py` dans le dossier `python`
+2. Suivre les paramètres d'entrée indiqués
+3. Le traitement peut prendre un certain temps en fonction du nombre de données à traiter
+4. En sortie :
+   - Nouveau modèle mis à l'échelle .osim
+   - Nouveaux fichiers `_settings.xml` en fonction des choix de paramétrage des outils
+   - Dans `outputs` : résultats de IK en .mot et de ID en .sto pour chaque sujet
+     
 
    
 
