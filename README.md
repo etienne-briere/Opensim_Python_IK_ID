@@ -62,7 +62,7 @@ $ conda activate opensim_scripting
      * exemples dans fichiers `outputs`
 
 ## Attention
-Cet exemple d'utilisation de l'API d'OpenSim avec Python a été développé dans le cadre d'un projet de Master 1, où la fiabilité des résultats obtenus à partir des différents outils n'a pas encore été validée. Ce code nécessite encore des améliorations pour pouvoir être appliqué à des projets plus avancés.
+Cet exemple d'utilisation de l'API d'OpenSim avec Python a été développé dans le cadre d'un projet de Master 1 en sciences des données du sport, où la fiabilité des résultats obtenus à partir des différents outils n'a pas encore été validée. Ce code nécessite encore des améliorations pour pouvoir être appliqué à des projets plus avancés.
 
 
    
