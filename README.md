@@ -60,7 +60,10 @@ $ conda activate opensim_scripting
    - Nouveaux fichiers `_Settings_modified_Sujet_n.xml` en fonction des choix de paramétrage des outils
    - Dans `outputs` : résultats de IK en .mot et de ID en .sto pour chaque sujet
      * exemples dans fichiers `outputs`
-     
+
+## Attention
+Cet exemple d'utilisation de l'API d'OpenSim avec Python a été développé dans le cadre d'un projet de Master 1, où la fiabilité des résultats obtenus à partir des différents outils n'a pas encore été validée. Ce code nécessite encore des améliorations pour pouvoir être appliqué à des projets plus avancés.
+
 
    
 
