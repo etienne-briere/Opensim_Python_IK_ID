@@ -12,21 +12,22 @@ $ conda activate opensim_scripting
 **Pour en savoir plus :** https://opensimconfluence.atlassian.net/wiki/spaces/OpenSim/pages/53085346/Scripting+in+Python.
 
 ## Création des dossiers préalables 
-- Créer un dossier avec le nom de votre projet, il doit contenir :
+- Créer un dossier avec le nom de votre projet
+  * Dupliquer tous les dossiers/fichiers proposés
+- Il doit contenir :
   * Un dossier `Calibrations`
     + comprenant un dossier pour chaque sujet `Sujet_n` avec à l'interieur le .C3D de la calibration réalisée
   * Un dossier `Data`
     + comprenant le(s) dossier(s) `Sujet_n` avec à l'interieur les .C3D des différents essais
-  * Un dossier `outputs`
+  * Un dossier `outputs` vide
     + comprenant le(s) dossier(s) `Sujet_n` vide(s)
-    + dossier regroupant les résultats de la modélisation pour chaque sujet à chaque essai
+    + dossier regroupant les futures résultats des process IK (.mot) et ID (.sto)
   * Un dossier `Geometry`
     +  meshs des segments corporels en .VTP qui servent à concevoir le modèle
   * Un dossier `python`
+    + code principal `IK_ID_with_opensim.py`
     + scripts des fonctions (.py) utilisées  par le code principal
-      
-  * Un fichier `Model.osim` : modèle à mettre à l'échelle
-    + dupliquer le fichier `Model.osim` 
+  * Un fichier `M2S_model_complet.osim` : modèle complet du corps humain à mettre à l'échelle 
   * Des fichiers `_Settings.xml` : paramétrage de chaque outil d’OpenSim
     + `Scale_Settings_empty.xml` : paramètres standards pour la mise à l'échelle 
     + `IK_Settings_empty.xml` : paramètres standards pour la cinématique inverse
@@ -36,12 +37,17 @@ $ conda activate opensim_scripting
 ## Paramètres d'entrée lors du lancement du script
 1. Masse(s) sujet(s) en kg
 2. Rotation sur x, y, z entre MOCAP et OPENSIM (en degré)
-3. Localisation de l'application des forces externes (pied droit/gauche)
-4. Choix du paramétrage des différents outils (Scale Model, IK, ID)
+3. Choix du paramétrage des outils Scale Model et Inverse Dynamics
+   - **Scale Model** :
+     * Outil "Model Scaler" -> ajuste la taille du modèle en fonction des données de la calibration, en mettant à l'échelle les segments corporels et en repositionnant les articulations
+     * Outil "Marker Placer" -> ajuste la position des marqueurs virtuels (markerset) sur le modèle pour qu'ils correspondent aux positions des marqueurs mesurées lors de la calibration
+   - **Inverse Dynamics** :
+     * Localisation de l'application des forces externes (pied droit/gauche)
  
-## Quelques conseils/limites d'utilisation du script
+## Quelques contraintes d'utilisation du script
 - Choix du paramétrage des outils est le même pour tous les sujets
 - Fonctionne seulement si essais comportent 2 plateformes de force
+  **MAIS**
 - Fonctionne qu'importe le nombre de sujets
 - Fonctionne qu'importe le nombre d'essais/sujet (même si nombre d'essais différent entre sujet)
 
@@ -50,9 +56,10 @@ $ conda activate opensim_scripting
 2. Suivre les paramètres d'entrée indiqués
 3. Le traitement peut prendre un certain temps en fonction du nombre de données à traiter
 4. En sortie :
-   - Nouveau modèle mis à l'échelle .osim
-   - Nouveaux fichiers `_settings.xml` en fonction des choix de paramétrage des outils
+   - Nouveau modèle mis à l'échelle (`Model_sujet_n.osim`)
+   - Nouveaux fichiers `_settings_modified_sujet_n.xml` en fonction des choix de paramétrage des outils
    - Dans `outputs` : résultats de IK en .mot et de ID en .sto pour chaque sujet
+     * exemples dans fichiers òutputs`
      
 
    
